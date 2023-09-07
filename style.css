@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 5rem;
 }
 
 .container {
@@ -56,6 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: blueviolet;
+    font-size: 2rem;
 }
 
 button:active {
