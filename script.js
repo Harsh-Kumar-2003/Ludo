@@ -1,7 +1,16 @@
 console.log("Welcome Lodu!");
 let diceButton = document.getElementById('dice');
+let msgBox = document.getElementsByClassName('message');
 var stringArray = ["red", "green", "yellow", "blue"];
 let i = 0;
+
+//Player turn 
+function startGame() {
+    if (diceButton.style.backgroundColor == blueviolet) {
+        msgBox.innerText = "Press roll to start the game";
+
+    }
+}
 
 //Generating a random number
 function rollDice() {
@@ -15,6 +24,5 @@ diceButton.addEventListener('click', () => {
     const result = rollDice();
     diceButton.innerText = result;
     diceButton.style.backgroundColor = stringArray[i];
-    if( result != 6)
-        i = (i + 1) % 4;
+    i = (i + 1) % 4;
 });
