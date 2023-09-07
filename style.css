@@ -1,40 +1,24 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-image: url('./images/background.jpg');
-        /* Replace 'wood_texture.jpg' with your image file */
-        background-repeat: repeat;
-        /* Repeat the image to cover the entire background */
-        background-size: cover;
-}
-.header{
-    border: 5px solid orange;
-    background-color: bisque;
-    border-radius: 10px;
-    height: 100px;
-    width: 800px;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
 }
-.container{
+
+.container {
     display: grid;
-    grid-template-columns: repeat(15 , 1fr);
+    grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(15, 1fr);
     height: 100vw;
-    max-height: 700px;
-    width: 700px;
+    max-height: 800px;
+    width: 800px;
     gap: 2px;
     border: 5px solid orange;
     border-radius: 10px;
     padding: 10px;
     background-color: bisque;
 }
-.center{
+
+.center {
     grid-row-start: 7;
     grid-row-end: 10;
     grid-column-start: 7;
@@ -46,7 +30,7 @@ body{
     align-items: center;
 }
 
-.center > #dice{
+.center>#dice {
     height: 50%;
     width: 50%;
     border: 2px solid black;
@@ -54,20 +38,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: blueviolet;
     font-size: 2rem;
 }
-button:active{
+
+button:active {
     transform: scale(0.95);
 }
-.box{
+
+.box {
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.home{
+
+.home {
     width: 75%;
     height: 75%;
     border: 2px solid black;
@@ -78,51 +65,46 @@ button:active{
     align-items: center;
     background-color: wheat;
 }
-.home > .s1 , .s2 , .s3 , .s4{
+
+.home>.token {
     border: 2px solid black;
     border-radius: 50%;
     height: 35%;
     width: 35%;
 }
-.red>.home>.s1,
-.red>.home>.s2,
-.red>.home>.s3,
-.red>.home>.s4 {
+
+.red>.home>.token {
     background-color: red;
 }
-.green>.home>.s1,
-.green>.home>.s2,
-.green>.home>.s3,
-.green>.home>.s4 {
+
+.green>.home>.token {
     background-color: green;
 }
-.blue>.home>.s1,
-.blue>.home>.s2,
-.blue>.home>.s3,
-.blue>.home>.s4 {
+
+.blue>.home>.token {
     background-color: blue;
 }
-.yellow>.home>.s1,
-.yellow>.home>.s2,
-.yellow>.home>.s3,
-.yellow>.home>.s4 {
+
+.yellow>.home>.token {
     background-color: yellow;
 }
 
-.red{
+.red {
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-end: 7;
     background-color: red;
 }
+
 .green {
-    grid-row-start:1 ;
+    grid-row-start: 1;
     grid-column-start: 10;
     grid-column-end: 16;
     grid-row-end: 7;
     background-color: green;
 }
+
 .blue {
     grid-row-start: 10;
     grid-column-start: 1;
@@ -130,6 +112,7 @@ button:active{
     grid-row-end: 16;
     background-color: blue;
 }
+
 .yellow {
     grid-row-start: 10;
     grid-column-start: 10;
@@ -137,18 +120,34 @@ button:active{
     grid-row-end: 16;
     background-color: yellow;
 }
-.r{
+
+.r {
     background-color: red;
 }
+
 .g {
     background-color: green;
 }
+
 .y {
     background-color: yellow;
 }
+
 .b {
     background-color: blue;
 }
-.star{
+
+.star {
     color: black;
+}
+
+.token {
+    background-color: #Fff39a;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.token:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* Adjust the color and size of the glow */
+    transform: scale(1.1);
 }
