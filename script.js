@@ -15,5 +15,6 @@ diceButton.addEventListener('click', () => {
     const result = rollDice();
     diceButton.innerText = result;
     diceButton.style.backgroundColor = stringArray[i];
-    i = (i + 1) % 4;
+    if( result != 6)
+        i = (i + 1) % 4;
 });
