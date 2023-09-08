@@ -17,8 +17,9 @@ function rollDice() {
 
     if (randomNumber != 6) {
         i = (i + 1) % 4;
-        msgBox.innerText = player[i].toUpperCase() + " roll the dice!"
+        
     }
+    msgBox.innerText = player[i].toUpperCase() + " roll the dice!";
 }
 
 // Add an event listener to the dice button (Rolling the dice)

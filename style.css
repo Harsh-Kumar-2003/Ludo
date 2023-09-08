@@ -57,7 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: blueviolet;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 button:active {
@@ -162,10 +162,58 @@ button:active {
 .token {
     background-color: #Fff39a;
     transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .token:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     /* Adjust the color and size of the glow */
     transform: scale(1.05);
+}
+
+.r1, .r2, .r3, .r4{
+    background: darkred;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+}
+
+.g1,
+.g2,
+.g3,
+.g4 {
+    background: darkgreen;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+}
+
+.y1,
+.y2,
+.y3,
+.y4 {
+    background: rgb(230, 230, 59);
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+}
+
+.b1,
+.b2,
+.b3,
+.b4 {
+    background: darkblue;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+}
+
+.goti:hover{
+    transform: scale(1.15);
 }
