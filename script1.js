@@ -31,3 +31,6 @@ diceButton.addEventListener('click', () => {
 });
 
 window.onload = startGame;
+
+//Whole projecrt made by Harsh Kumar
+//sumer bs dekha h
