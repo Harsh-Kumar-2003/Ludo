@@ -5,16 +5,20 @@ var player = ["red", "green", "yellow", "blue"];
 let i = 0;
 
 //Variables for red movement
-let red1 = 0, red2 = 0, red3 = 0, red4 = 0;
+let red1 = -1, red2 = -1, red3 = -1, red4 = -1;
+let redAtHome = 4;
 
 //Variables for green movement
-let green1 = 0, green2 = 0, green3 = 0, green4 = 0;
+let green1 = -1, green2 = -1, green3 = -1, green4 = -1;
+let greenAtHome = 4;
 
 //Variables for yellow movement
-let yellow1 = 0, yellow2 = 0, yellow3 = 0, yellow4 = 0;
+let yellow1 = -1, yellow2 = -1, yellow3 = -1, yellow4 = -1;
+let yellowAtHome = 4;
 
 //Variables for blue movement
-let blue1 = 0, blue2 = 0, blue3 = 0, blue4 = 0;
+let blue1 = -1, blue2 = -1, blue3 = -1, blue4 = -1;
+let blueAtHome = 4;
 
 //Arrays to move tokens
 var redPath = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56"];
@@ -37,8 +41,9 @@ function rollDice() {
         i = (i + 1) % 4;
 
     }
-    playerMove(i % 4, randomNumber);
     msgBox.innerText = player[i].toUpperCase() + " roll the dice!";
+    playerMove(i % 4, randomNumber);
+
 }
 
 // Add an event listener to the dice button (Rolling the dice)
@@ -49,14 +54,35 @@ diceButton.addEventListener('click', () => {
 //Movement for the current player
 function playerMove(index, numberOnDice) {
     if (index == 0) redMove(numberOnDice);
-    else if (index == 1) greenMove(numberOnDice);
-    else if (index == 2) yellowMove(numberOnDice);
-    else blueMove(numberOnDice);
+    //else if (index == 1) greenMove(numberOnDice);
+    //else if (index == 2) yellowMove(numberOnDice);
+    //else blueMove(numberOnDice);
 }
 
 //Functions to move tokens of every color
 function redMove(move) {
+    // if (red1 + move < 56) {
 
+    // }
+    if (move != 6 && redAtHome == 4) continue;
+
+    if (red4 + move <= 56) {
+        if (move == 6 && red4 == -1) {
+            let token = document.getElementsByClassName('R4')[0];
+            token.classList.remove('r4');
+            red4 = 0;
+            let temp = document.getElementsByClassName(redPath[red4])[0];
+            temp.classList.add('r4');
+            redAtHome--;
+        }
+        else {
+            let token = document.getElementsByClassName(redPath[red4])[0];
+            token.classList.remove('r4');
+            red4 = red4 + move;
+            let temp = document.getElementsByClassName(redPath[red4])[0];
+            temp.classList.add('r4');
+        }
+    }
 };
 window.onload = startGame;
 
