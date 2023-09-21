@@ -173,7 +173,7 @@ button:active {
     transform: scale(1.05);
 }
 
-.r1,
+/* .r1,
 .r2,
 .r3,
 .r4 {
@@ -182,9 +182,17 @@ button:active {
     border-radius: 50%;
     height: 50%;
     width: 50%;
+} */
+
+.red-token {
+    background: darkred;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
 }
 
-.g1,
+/* .g1,
 .g2,
 .g3,
 .g4 {
@@ -193,9 +201,17 @@ button:active {
     border-radius: 50%;
     height: 50%;
     width: 50%;
+} */
+
+.green-token {
+    background: darkgreen;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
 }
 
-.y1,
+/* .y1,
 .y2,
 .y3,
 .y4 {
@@ -204,12 +220,28 @@ button:active {
     border-radius: 50%;
     height: 50%;
     width: 50%;
+} */
+
+.yellow-token {
+    background: rgb(230, 230, 59);
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
 }
 
-.b1,
+/* .b1,
 .b2,
 .b3,
 .b4 {
+    background: darkblue;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+} */
+
+.blue-token {
     background: darkblue;
     border: 1px solid black;
     border-radius: 50%;

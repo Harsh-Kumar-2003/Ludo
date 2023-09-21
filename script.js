@@ -72,8 +72,20 @@ function redMove(move) {
     let boardPositions = document.querySelectorAll('red-token');
     boardPositions.forEach((position) => {
         position.addEventListener('click', () => {
-            position.re
-            //To be continued from here
+            if (position.contains("goti")) {
+                position.classList.remove("red-token");
+                let token = document.getElementsByClassName("1");
+                token.classList.add("red-token");
+            } else {
+                var classList = position.classList;
+                let currentPosition = classList[0];
+                position.classList.remove("red-token");
+                if (currentPosition + move <= 56) {
+
+                }
+            }
+
+            //To be continued from here 
         })
     })
 
