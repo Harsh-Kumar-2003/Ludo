@@ -4,6 +4,10 @@ let msgBox = document.getElementById('message');
 var player = ["red", "green", "yellow", "blue"];
 let i = 0;
 
+
+//THIS IS FOR TRYING OUT THE GAME IMPLLEMENTATION IDEAS
+
+
 //Variables for red movement
 let red1 = -1, red2 = -1, red3 = -1, red4 = 0;
 let redAtHome = 4;
@@ -65,29 +69,14 @@ function playerMove(index, numberOnDice) {
 
 //Functions to move tokens of every color
 function redMove(move) {
-    // if (red1 + move < 56) {
+    let boardPositions = document.querySelectorAll('red-token');
+    boardPositions.forEach((position) => {
+        position.addEventListener('click', () => {
+            position.re
+            //To be continued from here
+        })
+    })
 
-    // }
-    // if (move != 6 && redAtHome == 4) continue;
-
-    if ((red4 + move) <= 56) {
-        if ((move == 6) && (redAtHome == 4)) {
-            let token = document.getElementsByClassName('R4')[0];
-            token.classList.remove('r4');
-            red4 = 0;
-            let temp = document.getElementsByClassName('1')[0];
-            temp.classList.add('r4');
-            redAtHome--;
-        }
-        else if (redAtHome == 3) {
-            console.log(redPath[red4]);
-            let token = document.getElementsByClassName('r4')[0];
-            token.classList.remove('r4');
-            red4 = red4 + move;
-            let temp = document.getElementsByClassName(redPath[red4])[0];
-            temp.classList.add('r4');
-        }
-    }
 };
 window.onload = startGame;
 
