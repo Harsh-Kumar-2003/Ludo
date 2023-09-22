@@ -73,9 +73,9 @@ function redMove(move) {
     boardPositions.forEach((position) => {
         position.addEventListener('click', () => {
             if (position.contains("goti")) {
-                position.classList.remove("red-token");
+                position.classList.remove('red-token');
                 let token = document.getElementsByClassName("1");
-                token.classList.add("red-token");
+                token.classList.add('red-token');
             } else {
                 var classList = position.classList;
                 let currentPosition = classList[0];
